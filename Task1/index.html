@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yared Aeyle - Personal Website</title>
     <link rel="stylesheet" href="index.css">
+    <title>Yared Ayele Portfolio</title>
+    <style>
+     
+</style>
 </head>
 
 <body>
-
     <header class="header">
         <div class="logo">
             <a href="#"> <b>YARED AYELE</b></a>
@@ -18,24 +21,39 @@
         </nav>
     </header>
 
-    <section id="about">
-        <h2 class="about-me">About Me</h2>
-        <img class="img" src="image/Untitled design (1).png" alt="Your Name" width="150">
-        <p>I'm Yared Ayele, a web designer who loves mixing tech and creativity. I graduated in computer science and
-            enjoy making good-looking and easy-to-use websites. I pay close attention to details and use the latest tech
-            tricks to create websites that people enjoy. I'm good at working with others to understand what they want
-            and turning it into awesome digital stuff. .</p>
-        <ul>
-            <li><a href="https://github.com/Yared11000010" target="_blank" class="btn">Github</a></li>
-            <li><a href="https://www.linkedin.com/in/yared-ayele-debela/" target="_blank" class="btns">LinkedIn</a></li>
-        </ul>
+    <section class="hero">
+        <div class="container">
+            <h1>Yared Ayele</h1>
+            <p>Web Developer | Designer | Creative Thinker</p>
+            <a href="#contact" class="cta-btn">Contact Me</a>
+        </div>
+    </section>
+
+    <section id="about" style="padding:20px 10px;background-color: rgb(243, 246, 247); margin:0px;">
+        <div class="container about-me">
+            <div>
+                <img src="image/Untitled design (1).png" alt="Your Name" />
+            </div>
+            <div class="about-me-text">
+                <h2>About Me</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia maxime dignissimos temporibus odit
+                    consequatur nesciunt!
+                    Velit enim, reprehenderit rerum vero officia error eum quisquam excepturi, sunt quibusdam odio
+                    temporibus illum.</p>
+                <div class="social-buttons">
+                    <!-- Replace '#' with your actual GitHub and LinkedIn profiles -->
+                    <a href="https://github.com/Yared11000010" class="btn" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/yared-ayele-debela/" style="background-color: #0A66C2; padding: 10px 15px;" target="_blank">LinkedIn</a>
+                    <!-- Add more social buttons as needed -->
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="skills">
         <div class="container">
-            <h1 class="heading">MY Skills</h1>
+            <h1 class="heading">MY SKILL</h1>
             <div class="box-container">
-
                 <div class="box">
                     <img src="image/icon-1.png" alt="">
                     <h3>HTML 5</h3>
@@ -69,8 +87,8 @@
         </div>
     </section>
 
-    <section id="contact">
-        <h1 class="heading">Contact Me</h1>
+    <section id="contact" style="background-color: #F3F6F7; padding-top: 10px; margin:10px;">
+        <h1 class="heading">CONTACT ME</h1>
         <form>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -81,14 +99,19 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
 
-            <button type="submit">Send Message</button>
+            <button type="submit" class="submit">Send Message</button>
         </form>
     </section>
 
-    <footer>
-        &copy; 2024 Yared Ayele
+    <footer style="margin: 10px;">
+        <div class="container">
+            <p>&copy; 2024 Yared Ayele. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://github.com/Yared11000010" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/yared-ayele-debela/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
     </footer>
-
 </body>
 
 </html>

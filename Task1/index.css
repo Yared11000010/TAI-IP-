@@ -1,53 +1,112 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-}
 
-section {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #333;
-}
-
-p {
-    line-height: 1.6;
-}
-
-.img {
-    border-radius: 50%;
-    max-width: 100%;
-    height: auto;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
+.hero {
+    background: url('image/bannerjpg.jpg') center/cover no-repeat;
+    height: 80vh;
     display: flex;
-    justify-content: start;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
 }
 
-li {
-    margin: 0 10px;
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
 }
 
-a {
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
     text-decoration: none;
     color: #333;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #ddd;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+
+    nav {
+        float: none;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+}
+
+
+.about-me {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#about {
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about-me img {
+    max-width: 200px;
+    border-radius: 8px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.about-me-text {
+    max-width: 1000px;
+}
+
+.social-buttons {
+    margin-top: 20px;
+}
+
+.social-buttons a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.social-buttons a:hover {
+    background-color: #555;
 }
 
 form {
@@ -60,6 +119,11 @@ label {
     margin-bottom: 8px;
 }
 
+#contact {
+    padding:10px;
+    padding-bottom: 20px;
+}
+
 input,
 textarea {
     width: 100%;
@@ -70,7 +134,7 @@ textarea {
     box-sizing: border-box;
 }
 
-button {
+.submit {
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
@@ -83,67 +147,40 @@ button:hover {
     background-color: #555;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-    width: 100%;
-    bottom: 0;
-}
-
-.btn {
-    background-color: black;
-    padding: 10px 20px;
-    color: white;
-    border-radius: 0.2rem;
-}
-
-.btns {
-    background-color: #0A66C2;
-    padding: 10px 20px;
-    color: white;
-    border-radius: 0.2rem;
-}
-
-
-
-.content-area p {
-    padding: 2% 0px;
-    font-family: poppins;
-    line-height: 30px;
-}
-
-.container {
-    padding: 2px 2% 15px 2%;
-    padding-bottom: 100px;
-}
-
-.container .heading {
-    text-align: center;
-    padding-bottom: 15px;
-    color: #000000;
-    text-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-    font-size: 30px;
-}
-
 .heading {
     text-align: center;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
     color: #000000;
     text-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-    font-size: 30px;
+    font-size: 20px;
 }
 
-.about-me {
-    text-align: left;
-    padding-bottom: 15px;
-    color: #000000;
-    text-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-    font-size: 30px;
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
 }
 
+.footer-social {
+    margin-top: 10px;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0;
+    }
+}
 .container .box-container {
+    padding:10px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 15px;
@@ -165,15 +202,20 @@ footer {
     font-size: 22px;
     padding: 10px 0;
 }
+.btn{
+    background-color: black;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 0.2rem;
+}
 
+/* header  */
 .header {
     max-width: 1200px;
     margin: 0px auto;
-    padding: 20px;
+    padding: 5px;
     background-color: #fff;
     height: 100px;
-
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -196,61 +238,54 @@ nav {
 }
 
 nav a {
-
     text-decoration: none;
-    font-family: poppins;
     letter-spacing: 4px;
     font-size: 15px;
     margin: 0 10px;
     color: black;
 }
-
 nav a:hover {
-    background-color: #ccc;
-    border-radius: 0.2rem;
-    padding: 9px 14px;
     text-decoration: none;
     font-family: poppins;
     letter-spacing: 4px;
     font-size: 15px;
     margin: 0 10px;
-    color: black;
+    color: rgb(38, 128, 180);
 }
+
+
 @media (max-width: 768px) {
-    .logo {
-        width: 100%;
-        float: none;
-        text-align: center;
-        line-height: 50px;
-    }
+.logo {
+width: 100%;
+float: none;
+text-align: center;
+line-height: 50px;
+}
 
-    .logo a {
-        font-size: 20px;
-        display: block;
-    }
+.logo a {
+font-size: 20px;
+display: block;
+}
 
-    nav {
-        float: none;
-        text-align: center;
-        line-height: 20px;
-        margin-top: 10px;
-    }
+nav {
+float: none;
+text-align: center;
+line-height: 20px;
+margin-top: 10px;
+}
 
-    nav a {
-        font-size: 10px;
-        padding:0px 2px;
-        display: inline;
-        margin: 0px 0;
-    }
-    nav a:hover {
-        background-color: #ccc;
-        border-radius: 0.1rem;
-        padding: 4px 9px;
-        text-decoration: none;
-        font-family: poppins;
-        letter-spacing: 4px;
-        font-size: 10px;
-        margin: 0 10px;
-        color: black;
-    }
+nav a {
+font-size: 10px;
+padding:0px 2px;
+display: inline;
+margin: 0px 0;
+}
+nav a:hover {
+border-radius: 0.1rem;
+text-decoration: none;
+letter-spacing: 4px;
+font-size: 10px;
+margin: 0 10px;
+color: rgb(38, 128, 180);
+}
 }
